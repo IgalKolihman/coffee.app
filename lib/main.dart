@@ -1,7 +1,7 @@
 import 'dart:js';
 
 import 'package:coffee_machine/coffee_input.dart';
-import 'package:coffee_machine/providers.dart';
+import 'package:coffee_machine/cup_status_provider.dart';
 import 'package:coffee_machine/summary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
