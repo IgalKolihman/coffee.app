@@ -106,11 +106,21 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Image.asset("assets/PNG/heading.png"),
             const SizedBox(height: 50),
-            const CoffeeInput(inputName: "Sugar"),
-            const SizedBox(height: 25),
-            const CoffeeInput(inputName: "Coffee"),
-            const SizedBox(height: 25),
-            const BrewButton(),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset("assets/PNG/flower.png"),
+                Column(
+                  children: const [
+                    CoffeeInput(inputName: "Sugar"),
+                    SizedBox(height: 25),
+                    CoffeeInput(inputName: "Coffee"),
+                    SizedBox(height: 25),
+                    BrewButton(),
+                  ],
+                )
+              ],
+            ),
             const SizedBox(height: 50),
           ],
         ),

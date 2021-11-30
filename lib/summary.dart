@@ -1,4 +1,4 @@
-import 'package:coffee_machine/providers.dart';
+import 'package:coffee_machine/cup_status_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
