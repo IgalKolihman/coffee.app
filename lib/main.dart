@@ -1,12 +1,9 @@
-import 'dart:js';
-
 import 'package:bulleted_list/bulleted_list.dart';
 import 'package:coffee_machine/coffee_input.dart';
 import 'package:coffee_machine/cup_status_provider.dart';
 import 'package:coffee_machine/summary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -52,7 +49,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Coffee Machine',
       theme: ThemeData(
         buttonTheme: const ButtonThemeData(
           buttonColor: Colors.white,
@@ -89,7 +86,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<String> app_rules = [
+  final List<String> appRules = [
     "The machine must be able to accept up to 100 teaspoons of coffee or sugar.",
     "In order ro brew a cup of coffee the user must press the 'Brew' button.",
     "Only 1 cup of coffee can be brewed at a time.",
@@ -137,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           content: SizedBox(
                             height: 230,
                             child: BulletedList(
-                              listItems: app_rules,
+                              listItems: appRules,
                               bulletColor:
                                   Theme.of(context).colorScheme.secondary,
                               bulletType: BulletType.numbered,
@@ -218,7 +215,6 @@ class BrewButton extends StatelessWidget {
       onPressed: () {
         CupStatus cupStatus = Provider.of<CupStatus>(context, listen: false);
         Future<bool> confirmedFuture = cupStatus.onBrew(context);
-        bool ready = false;
         confirmedFuture.then((ready) => {
               if (ready)
                 {

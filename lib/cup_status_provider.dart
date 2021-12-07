@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,42 +19,6 @@ class CupStatus extends ChangeNotifier {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
           content: const Text(
             'I just crashed, looks like you found a bug.\nGood job 👍',
-            style: TextStyle(color: Colors.white),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: const Text('Thanks'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  Future<void> showAllBugs(BuildContext context) async {
-    return showDialog<void>(
-      context: context,
-      // barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Bug List',
-              style: TextStyle(fontWeight: FontWeight.w600)),
-          content: const Text(
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '2️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n'
-            '1️⃣ Allows input of 0 coffee cups\n',
             style: TextStyle(color: Colors.white),
           ),
           actions: <Widget>[
