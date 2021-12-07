@@ -1,13 +1,82 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class CupStatus extends ChangeNotifier {
   /// Internal, private state of the cart.
-  int sugar = 0;
-  int coffee = 0;
+  double sugar = 0;
+  double coffee = 0;
+  bool proccessing = false;
+
+  Future<void> alertError(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      // barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.red[400],
+          title: const Text('Error!',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+          content: const Text(
+            'I just crashed, looks like you found a bug.\nGood job 👍',
+            style: TextStyle(color: Colors.white),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Thanks'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> showAllBugs(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      // barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Bug List',
+              style: TextStyle(fontWeight: FontWeight.w600)),
+          content: const Text(
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '2️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n'
+            '1️⃣ Allows input of 0 coffee cups\n',
+            style: TextStyle(color: Colors.white),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Thanks'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   void addSugar() {
-    sugar += 1;
-    notifyListeners();
+    if (!proccessing) {
+      sugar += 1;
+      notifyListeners();
+    }
   }
 
   void removeSugar() {
@@ -21,8 +90,10 @@ class CupStatus extends ChangeNotifier {
   }
 
   void removeCoffee() {
-    coffee -= 1;
-    notifyListeners();
+    if (coffee > 0) {
+      coffee -= 1;
+      notifyListeners();
+    }
   }
 
   void clear() {
@@ -32,12 +103,27 @@ class CupStatus extends ChangeNotifier {
   }
 
   void setSugar(String amount) {
-    sugar = int.parse(amount);
+    sugar = double.parse(amount);
     notifyListeners();
   }
 
   void setCoffee(String amount) {
-    coffee = int.parse(amount);
+    coffee = double.parse(amount);
     notifyListeners();
+  }
+
+  Future<bool> onBrew(BuildContext context) async {
+    if (coffee > 100 || sugar > 100) {
+      alertError(context);
+      return false;
+    }
+
+    proccessing = true;
+    notifyListeners();
+    await Future.delayed(const Duration(seconds: 2));
+    proccessing = false;
+    notifyListeners();
+
+    return true;
   }
 }

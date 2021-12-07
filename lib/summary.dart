@@ -13,7 +13,7 @@ class IngredientDisplay extends StatelessWidget {
     final CupStatus cupStatus = Provider.of<CupStatus>(context, listen: false);
 
     String ingredientAsset;
-    int amount;
+    double amount;
     switch (ingredientName) {
       case "sugar":
         ingredientAsset = "assets/PNG/sugar.png";

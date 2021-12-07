@@ -110,6 +110,7 @@ class _InputControlState extends State<InputControl> {
     switch (widget.inputName) {
       case "Sugar":
         cupStatus.removeSugar();
+        cupStatus.alertError(context);
         _controller.text = cupStatus.sugar.toString();
         break;
       default:
