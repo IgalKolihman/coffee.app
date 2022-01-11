@@ -98,11 +98,11 @@ class _InputControlState extends State<InputControl> {
     switch (widget.inputName) {
       case "Sugar":
         cupStatus.addSugar();
-        _controller.text = cupStatus.sugar.toString();
+        _controller.text = cupStatus.sugar.toStringAsFixed(0);
         break;
       default:
         cupStatus.addCoffee();
-        _controller.text = cupStatus.coffee.toString();
+        _controller.text = cupStatus.coffee.toStringAsFixed(0);
     }
   }
 
@@ -110,11 +110,11 @@ class _InputControlState extends State<InputControl> {
     switch (widget.inputName) {
       case "Sugar":
         cupStatus.removeSugar();
-        _controller.text = cupStatus.sugar.toString();
+        _controller.text = cupStatus.sugar.toStringAsFixed(0);
         break;
       default:
         cupStatus.removeCoffee();
-        _controller.text = cupStatus.coffee.toString();
+        _controller.text = cupStatus.coffee.toStringAsFixed(0);
     }
   }
 
