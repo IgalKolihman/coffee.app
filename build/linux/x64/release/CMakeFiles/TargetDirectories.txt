@@ -1,0 +1,14 @@
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/edit_cache.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/install/strip.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/linux_desktop.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/rebuild_cache.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/list_install_components.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/install/local.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/CMakeFiles/install.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/install/strip.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/install/local.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/flutter_assemble.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/edit_cache.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/rebuild_cache.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/list_install_components.dir
+/home/igal/Projects/coffee.app/build/linux/x64/release/flutter/CMakeFiles/install.dir

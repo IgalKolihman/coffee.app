@@ -1,0 +1,17 @@
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/linux_desktop
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/icudtl.dat
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/lib/libflutter_linux_gtk.so
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/FontManifest.json
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/fonts/Roboto-Medium.ttf
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/fonts/DidotLTStd-Headline.ttf
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/fonts/Channel-9zWK.ttf
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/assets/PNG/sugar.png
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/assets/PNG/flower.png
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/assets/PNG/coffee.png
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/assets/PNG/heading.png
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/AssetManifest.json
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/NOTICES.Z
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/version.json
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/igal/Projects/coffee.app/build/linux/x64/release/bundle/lib/libapp.so
