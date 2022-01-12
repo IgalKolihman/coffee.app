@@ -14,9 +14,19 @@ Make sure that you have **Python** installed on your machine.
 It doesn't matter which version of python.
 
 # Running
+## Linux - Recommended
+Make sure that you are inside the coffee app repository.
+```bash
+cd coffee.app
+```
 
-First go into the app directory
+Run the following command
+```bash
+./build/linux/x64/release/bundle/linux_desktop
+```
 
+## Web - WIP
+Go into the web build directory
 ```bash
 cd coffee_machine/build/web
 ```
